@@ -182,7 +182,7 @@ offset = unfortunately calculating heights with javascript isn't always 100% acc
                 $(".pagination").remove();
                 createPagination($(this).attr("title"));
             });
-            $(".goto_next").live("click", function(e) {
+            $(".goto_next").die('click').live("click", function(e) {
                 e.preventDefault();
                 var act = "."+options.active;
                 var newcurr = parseInt($(".pagination").find(".active").attr("title")) + 1;
@@ -191,7 +191,7 @@ offset = unfortunately calculating heights with javascript isn't always 100% acc
                 $(".pagination").remove();
                 createPagination(newcurr);
             });
-            $(".goto_previous").live("click", function(e) {
+            $(".goto_previous").die('click').live("click", function(e) {
                 e.preventDefault();
                 var act = "."+options.active;
                 var newcurr = parseInt($(".pagination").find(".active").attr("title")) - 1;
